@@ -1,0 +1,7 @@
+@startuml
+class ConcreateObserverable extends Observable
+class Observer1 implements Observer
+class Observer2 implements Observer
+ConcreateObserverable --> Observer1
+ConcreateObserverable --> Observer2
+@enduml

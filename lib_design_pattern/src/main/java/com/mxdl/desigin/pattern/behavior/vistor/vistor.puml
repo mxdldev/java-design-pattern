@@ -1,0 +1,27 @@
+@startuml
+interface IVistor{
+    void vistorMan(Man manager);
+    void vistorWoman(Woman expler);
+}
+note left:访问协议
+class SuccVistor implements IVistor{
+}
+class FailVistor implements IVistor{
+}
+class Person{
+    String name;
+    void accept(IVistor vistor);
+}
+note right:被访问的实体对象
+
+class Man extends Person{
+}
+class Woman extends Person{
+}
+Person -.> IVistor
+'IVistor -.> Man
+'IVistor -.> Woman
+class Client
+Client --> IVistor
+Client --> Person
+@enduml

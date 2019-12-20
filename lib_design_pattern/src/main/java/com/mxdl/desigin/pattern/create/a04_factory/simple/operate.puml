@@ -1,0 +1,10 @@
+@startuml
+
+interface Operation
+class OperationAdd implements Operation
+class OperationSub implements Operation
+class OperationMul implements Operation
+class OperationDiv implements Operation
+
+SimpleFactory..> Operation
+@enduml

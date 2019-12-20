@@ -1,0 +1,15 @@
+@startuml
+interface IColleague {
+    void sendMessage(String message);
+    void notifyMessage(String messaege);
+}
+interface IMediator {
+    void sendMessage(String msg, IColleague colleague);
+}
+class ConcreateColleagueA implements IColleague
+class ConcreateColleagueB implements IColleague
+class ConcreateMediator implements IMediator
+ConcreateMediator --> ConcreateColleagueA
+ConcreateMediator --> ConcreateColleagueB
+
+@enduml

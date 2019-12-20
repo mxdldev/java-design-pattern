@@ -1,5 +1,8 @@
 package com.mxdl.desigin.pattern.behavior.mediator;
 
+import com.mxdl.desigin.pattern.behavior.mediator.entity.ConcreateColleagueA;
+import com.mxdl.desigin.pattern.behavior.mediator.entity.ConcreateColleagueB;
+
 /**
  * Description: <Client><br>
  * Author:      mxdl<br>

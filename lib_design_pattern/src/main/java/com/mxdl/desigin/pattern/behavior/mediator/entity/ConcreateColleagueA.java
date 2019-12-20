@@ -1,4 +1,7 @@
-package com.mxdl.desigin.pattern.behavior.mediator;
+package com.mxdl.desigin.pattern.behavior.mediator.entity;
+
+import com.mxdl.desigin.pattern.behavior.mediator.contract.IColleague;
+import com.mxdl.desigin.pattern.behavior.mediator.contract.IMediator;
 
 /**
  * Description: <ConcreateColleagueA><br>
@@ -7,10 +10,10 @@ package com.mxdl.desigin.pattern.behavior.mediator;
  * Version:     V1.0.0<br>
  * Update:     <br>
  */
-public class ConcreateColleagueA implements Colleague {
-    Mediator mMediator;
+public class ConcreateColleagueA implements IColleague {
+    IMediator mMediator;
 
-    public ConcreateColleagueA(Mediator mediator) {
+    public ConcreateColleagueA(IMediator mediator) {
         mMediator = mediator;
     }
 

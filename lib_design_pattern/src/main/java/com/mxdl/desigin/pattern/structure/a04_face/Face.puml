@@ -1,0 +1,11 @@
+@startuml
+package Face{
+    class Face
+    note top:将多个对象通过另外一个对象进行封装\n并统一提供对外的访问接口
+    class SubSystemClasses
+
+    Face ->SubSystemClasses
+
+
+}
+@enduml

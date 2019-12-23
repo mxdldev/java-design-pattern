@@ -1,0 +1,15 @@
+@startuml
+package Proxy{
+    interface Subject{
+        +request():void
+    }
+    class RealSubject implements Subject
+    class Proxy
+    note bottom:为一个对象提供一个代理以控制对这个对象的访问
+    class Proxy implements Subject{
+        -realSubject:RealSubject
+    }
+    Proxy ->RealSubject
+
+}
+@enduml

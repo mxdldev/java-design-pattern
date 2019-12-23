@@ -1,0 +1,14 @@
+@startuml
+package Bridge{
+    class Abstraction
+    note top:抽象
+    interface Implementor
+    note top:实现
+   Abstraction -> Implementor
+   class ConcreateAbstraction
+   note bottom:将对象的抽象和实现相分离，使二者可以相对独立的变化
+   class ConcreateAbstraction extends Abstraction
+   class ConcreateImplementor implements Implementor
+
+}
+@enduml

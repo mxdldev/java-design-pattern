@@ -1,0 +1,11 @@
+@startuml
+interface Builder{
+    +buildPart():void
+}
+class ConcreateBuilder implements Builder
+class Product
+ConcreateBuilder -.> Product
+
+Dicector -.> Builder
+note top:将一个复杂对象的创建与表示相分离,使用\n相同的构建过程创建出不同的对象表示
+@enduml

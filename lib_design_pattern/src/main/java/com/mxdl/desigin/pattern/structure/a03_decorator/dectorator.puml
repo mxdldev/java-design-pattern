@@ -1,0 +1,14 @@
+@startuml
+package Dectorator{
+    interface Compontent{
+        +operate():void
+    }
+    class Dectorator implements Compontent
+    class ConcreateComponent implements Compontent
+    class ConcreateDectorator
+    note bottom:动态的给一个对象添加一些额外的功能\n，就增加功能而言他比生成子类更加的灵活
+    class ConcreateDectorator extends Dectorator
+
+    Dectorator ->Compontent
+
+@enduml

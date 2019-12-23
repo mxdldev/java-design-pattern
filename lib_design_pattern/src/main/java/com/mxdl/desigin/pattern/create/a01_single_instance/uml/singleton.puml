@@ -1,0 +1,15 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+package "class Singleton" #FFFFFF {
+
+    class Singleton{
+    -Singleton()
+    +getInstance():Singleton
+    }
+    note right: 确保一个类只有一个实例对象的存在,\n而且自行实例化并向整个系统提供
+    'Clent ..>Singleton
+    Singleton <.. Client
+}
+
+@enduml

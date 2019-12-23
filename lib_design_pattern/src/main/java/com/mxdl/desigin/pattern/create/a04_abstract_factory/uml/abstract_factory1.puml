@@ -1,0 +1,14 @@
+@startuml
+package "Abstract Factory" {
+class AbstractFactory {
+    +careateProduct():AbstractProduct
+}
+note top:定义一个创建一组相关或者一组具有相互依赖\n关系的对象接口，并且无需指定它的具体类型
+class ConcreateFactory extends AbstractFactory
+
+class AbstractProduct
+class ConcreateProduct extends AbstractProduct
+ConcreateFactory -> ConcreateProduct
+
+}
+@enduml

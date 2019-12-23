@@ -1,0 +1,21 @@
+@startuml
+skinparam classAttributeIconSize 0
+package "class Builder"{
+    abstract class Builder{
+        + buildPart():void;
+        + build():Product;
+    }
+    class ConcreateBuilderA extends Builder
+    class ConcreateBuilderB extends Builder
+    class Product
+    ConcreateBuilderA --> Product
+    ConcreateBuilderB --> Product
+
+    class BuilderDirector{
+        + createProduct(Builder build):Product
+    }
+    note top:将一个复杂对象的创建和表示相分离，\n用相同的构建过程创建出不同的对象表示
+    BuilderDirector -.> Builder
+
+}
+@enduml

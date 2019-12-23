@@ -1,0 +1,14 @@
+@startuml
+package Conposite{
+    interface Component{
+        +operate()
+        +add(paramter:Component)
+        +remove(paramter:Component)
+    }
+    class Leaf implements Component
+    class Conposite implements Component{
+        +conponents:List<Component>
+    }
+    Conposite o--> Component
+}
+@enduml

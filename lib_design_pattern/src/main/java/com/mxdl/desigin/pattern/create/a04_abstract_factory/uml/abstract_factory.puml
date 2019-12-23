@@ -1,0 +1,34 @@
+@startuml
+package "Abstract Factory"{
+interface IPerson{
+     +eat():void
+     +sleep():void
+     +study():void
+}
+class YellowPerson implements IPerson
+class WhitePerson implements IPerson
+class BlackPerson implements IPerson
+
+class YellowManPerson extends YellowPerson
+class YellowWomanPerson extends YellowPerson
+
+class WhiteManPerson extends WhitePerson
+class WhiteWomanPerson extends WhitePerson
+
+class BlackManPerson extends BlackPerson
+class BlackWomanPerson extends BlackPerson
+
+interface IPersonFactory {
+    +createWhitePersonFactory():IPerson;
+    +IPerson createBlackPersonFactory():IPerson;
+    +IPerson createYellowPersonFactory():IPerson;
+}
+note top:定义一个创建一组相关或具有相互依赖关系\n的对象的接口，而且无需指定他们的具体类型
+class ManFactory implements IPersonFactory
+class WomanFactory implements IPersonFactory
+
+ManFactory -.> IPerson
+WomanFactory -.> IPerson
+}
+
+@enduml

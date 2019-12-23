@@ -1,7 +1,7 @@
 package com.mxdl.desigin.pattern.behavior.vistor.contract;
 
 /**
- * Description: <Person><br>
+ * Description: <IPerson><br>
  * Author:      mxdl<br>
  * Date:        2019/12/20<br>
  * Version:     V1.0.0<br>

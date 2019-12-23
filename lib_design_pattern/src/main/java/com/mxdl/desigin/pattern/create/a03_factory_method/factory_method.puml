@@ -1,0 +1,16 @@
+@startuml
+
+skinparam classAttributeSkipSize 0
+package "Factory Method" {
+abstract class Creator{
+   +factoryMethod():Product
+}
+abstract class Product
+
+class ConcreateCreator extends Creator
+note top: 定义了一个创建对象的接口，\n 具体的创建类型由子类来完成
+class ConcreateProduct extends Product
+
+ConcreateCreator -> ConcreateProduct
+}
+@enduml

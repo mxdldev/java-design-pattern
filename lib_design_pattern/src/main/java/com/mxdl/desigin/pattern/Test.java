@@ -1,5 +1,6 @@
 package com.mxdl.desigin.pattern;
 
+import java.util.ArrayList;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -40,5 +41,7 @@ public class Test {
         });
         System.out.println("update 22 start...");
         observable.notifyObservers("fff");
+        Iterable iterable;
+        ArrayList list;
     }
 }

@@ -16,7 +16,7 @@ package "Adapter"{
     Adapter ->Adaptee
 
     class Client
-    note left:1.类适配器\n2.接口适配器\n3.对象适配器
+    note left:1.接口适配器\n2.对象适配器
     Client ->Target
 }
 

@@ -44,6 +44,6 @@ public class Person {
 	}
 	@Override
 	public String toString() {
-		return "IPerson [a=" + a + ", b=" + b + ", c=" + c + "]";
+		return "APerson [a=" + a + ", b=" + b + ", c=" + c + "]";
 	}
 }

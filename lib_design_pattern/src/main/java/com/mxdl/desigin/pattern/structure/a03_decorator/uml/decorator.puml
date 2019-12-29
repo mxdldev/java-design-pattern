@@ -1,0 +1,12 @@
+@startuml
+package "Decorator Pattern"{
+     interface IPerson {
+         eat():void
+     }
+     class Person implements IPerson
+     class SuperPerson
+     note bottom:给一个对象增加一些额外的功能\n使它变得更加强大
+     class SuperPerson implements IPerson
+     SuperPerson ->Person
+}
+@enduml

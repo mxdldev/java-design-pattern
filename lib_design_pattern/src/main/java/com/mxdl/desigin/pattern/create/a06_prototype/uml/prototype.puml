@@ -1,0 +1,13 @@
+@startuml
+package Prototype{
+    abstract class APerson
+    class PrototypePerson
+    note bottom:由原型对象指定创建对象的类型，并将\n原型对象的数据拷贝到新创建的对象
+    class PrototypePerson extends APerson{
+        +clonePerson():APerson
+    }
+    class CopyPerson extends APerson
+    PrototypePerson .> CopyPerson
+}
+
+@enduml

@@ -1,0 +1,16 @@
+@startuml
+package SimpleFactory{
+    interface IOperate{
+        operate(int left,int right):int
+    }
+    class OperateAdd implements IOperate
+    class OperateSub implements IOperate
+    class OperateMul implements IOperate
+    class OperateDiv implements IOperate
+    class SimpleFactory{
+        +createOperation(String operate):IOperate
+    }
+    note top:提供一个创建对象的静态方法，根据传递\n 参数的不同返回不同类型的对象
+    SimpleFactory..> IOperate
+}
+@enduml

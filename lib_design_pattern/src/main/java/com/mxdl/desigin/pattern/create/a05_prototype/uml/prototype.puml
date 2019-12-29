@@ -1,6 +1,0 @@
-@startuml
-interface Cloneable{
-    +clone():Object
-}
-class Prototype implements Cloneable
-@enduml

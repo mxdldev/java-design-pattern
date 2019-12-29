@@ -1,0 +1,13 @@
+@startuml
+package PoxyPattern {
+    interface IGame {
+        +login():void
+        +palyer():void
+    }
+    class GamePlayer implements IGame
+    class GamePoxy
+    note bottom:给一个对象提供一个代理对象\n来控制对该对象的访问
+    class GamePoxy implements IGame
+    GamePoxy -> GamePlayer
+}
+@enduml

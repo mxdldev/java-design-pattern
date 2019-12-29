@@ -24,6 +24,6 @@ public class Person {
 	}
 	@Override
 	public String toString() {
-		return "IPerson [head=" + head + ", body=" + body + ", foot=" + foot + "]";
+		return "APerson [head=" + head + ", body=" + body + ", foot=" + foot + "]";
 	}
 }

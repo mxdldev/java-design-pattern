@@ -1,6 +1,8 @@
 package com.mxdl.desigin.pattern.structure.a01_adapter;
 
-import com.mxdl.desigin.pattern.structure.a01_adapter.contract.Target;
+import com.mxdl.desigin.pattern.structure.a01_adapter.entity.KeBi;
+import com.mxdl.desigin.pattern.structure.a01_adapter.entity.QiaoDan;
+import com.mxdl.desigin.pattern.structure.a01_adapter.entity.TranslaterAdapter;
 
 /**
  * Description: <Client><br>
@@ -11,7 +13,13 @@ import com.mxdl.desigin.pattern.structure.a01_adapter.contract.Target;
  */
 public class Client {
     public static void main(String[] args) {
-        Target target = new Adapter();
-        target.request();
+        QiaoDan qiaoDan = new QiaoDan("QiaoDan");
+        KeBi keBi = new KeBi("KeBi");
+
+        qiaoDan.attack();
+        keBi.defense();
+
+        TranslaterAdapter translaterAdapter = new TranslaterAdapter("TranslaterAdapter");
+        translaterAdapter.defense();
     }
 }

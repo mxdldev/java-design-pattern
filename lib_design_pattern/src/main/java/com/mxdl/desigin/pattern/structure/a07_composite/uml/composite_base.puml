@@ -1,0 +1,15 @@
+@startuml
+package Conposite{
+    interface Component{
+        +IOperate()
+        +add(paramter:Component)
+        +remove(paramter:Component)
+    }
+    note top:将多个单一对象组成一个具有一定层次关系的树形结构的组合对象\n 组合模式淡化了单个对象和组合对象之间的差别\n使得单个对象和组合对象之间有相同的处理方式
+    class Leaf implements Component
+    class Conposite implements Component{
+        +conponents:List<Component>
+    }
+    Conposite o--> Component
+}
+@enduml

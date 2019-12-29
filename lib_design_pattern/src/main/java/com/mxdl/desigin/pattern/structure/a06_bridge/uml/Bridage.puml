@@ -1,0 +1,18 @@
+@startuml
+package "Bridage Pattern"{
+    abstract class APhoneBrand{
+        createBrnad():void
+    }
+    note top:将一个对象的抽象和实现相分离\n使二者可以相对独立变化
+    interface IPhoneSoftware {
+        crateSoftware():void
+    }
+    APhoneBrand ->IPhoneSoftware
+    class XiaoMiBrand extends APhoneBrand
+    class XiaoMiSoftware implements IPhoneSoftware
+    class SanXingBrand extends APhoneBrand
+    class SanXingSoftware implements IPhoneSoftware
+
+
+}
+@enduml

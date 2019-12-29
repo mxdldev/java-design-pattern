@@ -1,0 +1,23 @@
+@startuml
+package "Adapter"{
+
+    interface Target{
+        +request():void
+    }
+    note top:将一个接口转换为客户所需要的另外一个\n接口,从而使原来因接口不匹配不能在一起\n工作的两个类能够在一起正常的工作
+    class Adapter
+      note bottom:适配器
+    class Adapter implements Target{
+        Adaptee adaptee
+    }
+
+    class Adaptee
+    note bottom:需要适配的接口
+    Adapter ->Adaptee
+
+    class Client
+    note left:1.接口适配器\n2.对象适配器
+    Client ->Target
+}
+
+@enduml

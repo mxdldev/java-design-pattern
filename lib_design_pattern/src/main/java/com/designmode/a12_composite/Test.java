@@ -1,6 +1,6 @@
 package com.designmode.a12_composite;
 
-public class Test {
+public class  Test {
 	public static void main(String[] args) {
 		File f1 = new File();
 		File f2 = new File();

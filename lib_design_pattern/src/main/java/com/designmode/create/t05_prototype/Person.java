@@ -37,7 +37,7 @@ public class Person implements Cloneable,Serializable{
 	}
 	@Override
 	public String toString() {
-		return "IPerson [name=" + name + ", age=" + age + ", cat=" + cat + "]";
+		return "APerson [name=" + name + ", age=" + age + ", cat=" + cat + "]";
 	}
 	
 	public Person deepCopy() throws IOException, ClassNotFoundException{

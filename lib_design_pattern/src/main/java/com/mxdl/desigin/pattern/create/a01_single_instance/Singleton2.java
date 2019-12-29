@@ -1,7 +1,7 @@
 package com.mxdl.desigin.pattern.create.a01_single_instance;
 
 /**
- * Description: <Singleton><br>
+ * Description: <推荐的单例模式><br>
  * Author:      mxdl<br>
  * Date:        2019/12/23<br>
  * Version:     V1.0.0<br>

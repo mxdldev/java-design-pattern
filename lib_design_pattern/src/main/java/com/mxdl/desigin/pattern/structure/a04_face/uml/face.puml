@@ -1,0 +1,19 @@
+@startuml
+package "Face Pattern"{
+    interface ICook {
+        cooking():void
+    }
+    class RiceCook implements ICook
+    class NoodleCook implements ICook
+
+    class CookManager{
+    -mRiceCook:RiceCook
+    -mNoodleCook:NoodleCook
+     +cookRice():void
+     +cookNoodle():void
+    }
+    note bottom:将多个对象通过另外一个对象封装起来\n对外提供统一的访问接口
+    RiceCook <--* CookManager
+    NoodleCook <--* CookManager
+}
+@enduml

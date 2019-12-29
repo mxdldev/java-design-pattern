@@ -1,0 +1,14 @@
+@startuml
+package "Flyweight Pattern"{
+    interface IWebSite
+    class User
+    class WebSite implements IWebSite
+    WebSite .->User
+    class WebSiteFactory{
+        -mHashMap:HashMap<String, WebSite>
+        +getWebSite(String key):WebSite
+    }
+    note top:通过享元对象可以提供大量的细粒度化的对象
+    WebSiteFactory -->WebSite
+}
+@enduml

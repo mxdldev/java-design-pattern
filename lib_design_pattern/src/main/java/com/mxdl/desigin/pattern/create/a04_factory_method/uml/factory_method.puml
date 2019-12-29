@@ -1,0 +1,18 @@
+@startuml
+package FactoryMethod{
+    interface IOperate{
+        oprerate(int left,int right):int
+    }
+    class OperateAdd implements IOperate
+    class OperateSub implements IOperate
+
+    interface IOperateFactory{
+        createOperate():IOperate
+    }
+    note top:定义个创建对象的接口，具体的创建类型由子类完成
+    class AddFactory implements IOperateFactory
+    class SubFactory implements IOperateFactory
+
+    IOperateFactory .> IOperate
+}
+@enduml

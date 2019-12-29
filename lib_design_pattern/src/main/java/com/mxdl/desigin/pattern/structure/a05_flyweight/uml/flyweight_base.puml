@@ -1,0 +1,18 @@
+@startuml
+package Flyweight{
+    interface Flyweight{
+        +IOperate():void
+    }
+    note top:使用享元对象有效的支持大量的细粒度的对象
+    class ConcreateFlyweight implements Flyweight
+    class UnSharedFlyWeight implements Flyweight
+    class FlyweightFactory{
+        +flyweights:Flyweight
+    }
+    FlyweightFactory ->Flyweight
+    ConcreateFlyweight <-- Client
+    UnSharedFlyWeight <-- Client
+    FlyweightFactory <-- Client
+}
+
+@enduml

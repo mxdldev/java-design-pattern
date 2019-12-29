@@ -18,7 +18,7 @@ public class Test {
 		
 		p.setCat(car);
 		
-		//IPerson p1 = (IPerson) p.clone();
+		//APerson p1 = (APerson) p.clone();
 		Person p1 = p.deepCopy();
 		p1.setName("li siff");
 		p1.getCat().setAge(99);

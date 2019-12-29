@@ -1,0 +1,11 @@
+@startuml
+class Subject extends Observable {
+    +void update():void
+}
+class Subject
+note bottom:定义了一种一对多的依赖关系，当被观察者发生过变化是时，\n所有的观察者都能收到通知，并且能够自动更新
+class Observer1 implements Observer
+class Observer2 implements Observer
+Observer1 <--o Subject
+Observer2 <--o Subject
+@enduml

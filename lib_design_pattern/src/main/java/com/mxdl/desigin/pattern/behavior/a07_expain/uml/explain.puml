@@ -1,0 +1,11 @@
+@startuml
+interface IExplain {
+    explain():int
+}
+note top:定义一个语法算法来解析将要执行的语句
+class NumberExplain implements IExplain
+class AddExplain implements IExplain
+class SubExplain implements IExplain
+class MulExplain implements IExplain
+class DevExplain implements IExplain
+@enduml

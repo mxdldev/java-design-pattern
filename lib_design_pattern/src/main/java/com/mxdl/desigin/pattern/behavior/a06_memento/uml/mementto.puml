@@ -1,0 +1,12 @@
+@startuml
+package "Mementto Pattern"{
+    class Person{
+      +createMementtoPerson():MementtoPerson
+      +reMementtoPerson(MementtoPerson mementtoPerson):void
+    }
+    note top:在不破坏原对象封装性的前提条件下，捕获一个对象的内部状态，把该状态保存在该对象之外，\n在有需要的情况下恢复原对象为保存时的那个状态
+    class MementtoPerson
+    Person .-> MementtoPerson
+}
+
+@enduml

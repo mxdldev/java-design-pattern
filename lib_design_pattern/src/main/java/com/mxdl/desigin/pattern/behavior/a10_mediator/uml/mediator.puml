@@ -1,0 +1,26 @@
+@startuml
+
+package "Mediator Pattern"{
+    interface ICountry {
+        sendMessage(String message):void
+        notifyMessage(String messaege):void
+    }
+    interface IUN {
+        void sendMessage(String msg, ICountry country);
+    }
+    class UN implements IUN{
+     -mUsa:Usa
+      -mIrap:Irap
+     sendMessage(String msg, ICountry country):void
+    }
+    class UN
+    note bottom:将多个对象之间多对多的网状关系变成一对多的星状关系
+    class Usa implements ICountry
+    class Irap implements ICountry
+
+    Usa <-- UN
+    Irap <-- UN
+
+}
+
+@enduml

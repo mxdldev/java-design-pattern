@@ -1,9 +1,9 @@
-package com.mxdl.desigin.pattern.create.a04_factory_method.contract;
+package com.mxdl.desigin.pattern.behavior.a02_strategy.contract;
 
 /**
  * Description: <ITv><br>
  * Author:      mxdl<br>
- * Date:        2019/12/23<br>
+ * Date:        2019/12/29<br>
  * Version:     V1.0.0<br>
  * Update:     <br>
  */

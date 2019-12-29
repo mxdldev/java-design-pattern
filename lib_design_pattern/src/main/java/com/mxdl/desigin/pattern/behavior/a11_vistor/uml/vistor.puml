@@ -1,0 +1,27 @@
+@startuml
+package "Vistor Pattern"{
+    interface IVistor{
+        void vistorMan(Man manager);
+        void vistorWoman(Woman expler);
+    }
+    note top:将对象的表示和行为相分离\n适合数据结构比较稳定的数据
+
+    class SuccVistor
+    note right:成功的访问者
+    class SuccVistor implements IVistor
+
+    class FailVistor
+    note right:失败的访问者
+    class FailVistor implements IVistor
+
+    abstract class APerson{
+     name:String
+     accept(IVistor vistor):void
+    }
+    note right:被访问的实体对象
+
+    class Man extends APerson
+    class Woman extends APerson
+    APerson -.> IVistor
+}
+@enduml

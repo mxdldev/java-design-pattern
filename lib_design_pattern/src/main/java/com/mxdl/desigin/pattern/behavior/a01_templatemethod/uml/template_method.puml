@@ -1,0 +1,10 @@
+@startuml
+package "TemplateMethod Pattern"{
+    interface IAnimal {
+        +eat():void
+    }
+    note top:只定义一个算法的执行骨架\n具体的算法实现延迟到子类完成
+    class Cat implements IAnimal
+    class Dog implements IAnimal
+}
+@enduml

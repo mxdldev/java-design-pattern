@@ -1,0 +1,12 @@
+@startuml
+package "State Pattern"{
+    Light --> IState
+    class Light
+    note top:对象在不同状态下有不同的行为\n当状态发生改变时行为也发生变化\n当行为发生变化时其状态也发生变化
+    interface IState {
+        void onPress(Light light);
+    }
+    class StateOpen implements IState
+    class StateClose implements IState
+}
+@enduml

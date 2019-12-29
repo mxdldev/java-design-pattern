@@ -1,0 +1,15 @@
+@startuml
+package "Iterator Pattern"{
+    class Student
+    class School{
+        -mList:List<Student>
+        -int index = 0;
+        +addStudent(Student student):void
+        +removeStudent(Student student):void
+        +isHave():boolean
+        +next():Student
+    }
+    note top:提供一个方法来迭代容器对象中的每一个元素\n而不暴露该对象的具体实现细节
+    School o->Student
+}
+@enduml

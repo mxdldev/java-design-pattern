@@ -1,0 +1,25 @@
+
+@startuml
+package "Command Pattern"{
+abstract class ACommand {
+    #tv:ITv
+    +ACommand(ITv ITv)
+    +exeCommand():void
+}
+note top:每一个请求都封装为一个命令，多个命令可以排队、撤销、记录日志等操作
+interface ITv {
+    void turnOn();
+    void turnOff();
+    void changeChannel();
+}
+ITv <-* ACommand
+class TV implements ITv
+class TurnOnCommand extends ACommand
+class TurnOffCommand extends ACommand
+class TurnChannelCommand extends ACommand
+
+TurnOnCommand <--* CommandManager
+TurnOffCommand <--* CommandManager
+TurnChannelCommand <--* CommandManager
+
+@enduml

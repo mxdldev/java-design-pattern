@@ -1,0 +1,10 @@
+@startuml
+package "Stategy Pattern"{
+    interface IOperate {
+        operate(int left,int right):void
+    }
+    class AddOperate implements IOperate
+    class SubOperate implements IOperate
+    Context *->IOperate
+}
+@enduml

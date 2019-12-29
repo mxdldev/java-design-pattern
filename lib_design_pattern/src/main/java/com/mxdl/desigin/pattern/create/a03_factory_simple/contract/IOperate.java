@@ -1,7 +1,7 @@
 package com.mxdl.desigin.pattern.create.a03_factory_simple.contract;
 
 /**
- * Description: <IOperate><br>
+ * Description: <ITv><br>
  * Author:      mxdl<br>
  * Date:        2019/12/18<br>
  * Version:     V1.0.0<br>

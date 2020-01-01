@@ -1,10 +1,18 @@
 @startuml
+skinparam classAttributeIconSize 0
 package "Stategy Pattern"{
     interface IOperate {
-        operate(int left,int right):void
+        +operate(int left,int right):void
     }
+    class AddOperate
+    note bottom:算法实现1
     class AddOperate implements IOperate
+
+    class SubOperate
+    note bottom:算法实现2
     class SubOperate implements IOperate
+    class Context
+    note top:定义了多个算法，多个算法之间可以灵活切换
     Context *->IOperate
 }
 @enduml

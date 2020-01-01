@@ -1,9 +1,15 @@
 @startuml
+skinparam classAttributeIconSize 0
 package "Face Pattern"{
     interface ICook {
         cooking():void
     }
+    class RiceCook
+    note left:子对象1
     class RiceCook implements ICook
+
+    class NoodleCook
+    note right:子对象2
     class NoodleCook implements ICook
 
     class CookManager{
@@ -12,7 +18,7 @@ package "Face Pattern"{
      +cookRice():void
      +cookNoodle():void
     }
-    note bottom:将多个对象通过另外一个对象封装起来\n对外提供统一的访问接口
+    note bottom:将多个对象通过另外一个对象封装起来，\n对外提供统一的访问接口
     RiceCook <--* CookManager
     NoodleCook <--* CookManager
 }

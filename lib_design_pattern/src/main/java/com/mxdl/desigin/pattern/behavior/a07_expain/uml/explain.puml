@@ -1,11 +1,26 @@
 @startuml
+skinparam classAttributeIconSize 0
 interface IExplain {
     explain():int
 }
-note top:定义一个语法算法来解析将要执行的语句
+note top:定义一个语法算法，来解析将要执行的语句
+class NumberExplain
+note bottom:数字语法算法
 class NumberExplain implements IExplain
+
+class AddExplain
+note bottom:加法语法算法
 class AddExplain implements IExplain
+
+class SubExplain
+note bottom:减法语法算法
 class SubExplain implements IExplain
+
+class MulExplain
+note bottom:乘法语法算法
 class MulExplain implements IExplain
+
+class DevExplain
+note bottom:除法语法算法
 class DevExplain implements IExplain
 @enduml

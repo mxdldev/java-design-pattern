@@ -1,16 +1,30 @@
 @startuml
+skinparam classAttributeIconSize 0
 package FactoryMethod{
+
     interface IOperate{
-        oprerate(int left,int right):int
+        +oprerate(int left,int right):int
     }
+    note right:操作协议
+
+    class OperateAdd
+    note bottom:加法对象
     class OperateAdd implements IOperate
+
+    class OperateSub
+    note bottom:减法对象
     class OperateSub implements IOperate
 
     interface IOperateFactory{
-        createOperate():IOperate
+        +createOperate():IOperate
     }
-    note top:定义个创建对象的接口，具体的创建类型由子类完成
+    note top:定义一个创建对象的接口，具体的创建类型由子类完成
+    class AddFactory
+    note bottom:加法工厂
     class AddFactory implements IOperateFactory
+
+    class SubFactory
+    note bottom:减法工厂
     class SubFactory implements IOperateFactory
 
     IOperateFactory .> IOperate

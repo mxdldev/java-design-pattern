@@ -1,12 +1,19 @@
 @startuml
+skinparam classAttributeIconSize 0
 package "State Pattern"{
     Light --> IState
     class Light
-    note top:对象在不同状态下有不同的行为\n当状态发生改变时行为也发生变化\n当行为发生变化时其状态也发生变化
+    note top:实体对象
+    note top:当一个对象在状态改变的时候允许改变他的行为，\n使对象看起来像是改变了他的类
     interface IState {
         void onPress(Light light);
     }
+    class StateOpen
+    note bottom:打开状态
     class StateOpen implements IState
+
+    class StateClose
+    note bottom:关闭状态
     class StateClose implements IState
 }
 @enduml

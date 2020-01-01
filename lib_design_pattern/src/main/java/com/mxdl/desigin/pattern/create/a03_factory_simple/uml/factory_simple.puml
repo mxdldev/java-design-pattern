@@ -1,16 +1,29 @@
 @startuml
-package SimpleFactory{
+skinparam classAttributeIconSize 0
+package "Simple Factory Pattern"{
     interface IOperate{
-        operate(int left,int right):int
+        +operate(int left,int right):int
     }
+    note right:操作协议
+    class OperateAdd
+    note bottom:加法操作对象
     class OperateAdd implements IOperate
+
+    class OperateSub
+    note bottom:减法操作对象
     class OperateSub implements IOperate
+
+    class OperateMul
+    note bottom:乘法操作对象
     class OperateMul implements IOperate
+
+    class OperateDiv
+    note bottom:除法操作对象
     class OperateDiv implements IOperate
     class SimpleFactory{
         +createOperation(String operate):IOperate
     }
-    note top:提供一个创建对象的静态方法，根据传递\n 参数的不同返回不同类型的对象
+    note top:定义一个创建对象的静态方法，根据传递\n参数的不同创建出不同类型的对象
     SimpleFactory..> IOperate
 }
 @enduml

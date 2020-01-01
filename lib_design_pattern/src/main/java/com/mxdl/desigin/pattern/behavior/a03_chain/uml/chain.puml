@@ -1,13 +1,22 @@
 @startuml
+skinparam classAttributeIconSize 0
 package "Chain Pattern"{
     abstract class Employee {
         #mEmployee:Employee
         +Employee(Employee employee)
         +request(int day):void
     }
-    note top:当前对象持有下家对象的引用而形成一个链条，请求在这个链条上传递\n直到有对象能够处理该对象的请求为止
+    note top:当前对象持有下家对象的引用而形成一个链条，\n请求在这个链条上传递，直到有对象能够处理\n该对象的请求为止
+    class SmallLeader
+    note bottom:处理对象1
     class SmallLeader extends Employee
+
+    class MiddleLeader
+    note bottom:处理对象2
     class MiddleLeader extends Employee
+
+    class BigLeader
+    note bottom:处理对象3
     class BigLeader extends Employee
 
     SmallLeader->MiddleLeader

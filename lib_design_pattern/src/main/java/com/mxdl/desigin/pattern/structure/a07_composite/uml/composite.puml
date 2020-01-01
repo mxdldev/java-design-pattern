@@ -1,14 +1,18 @@
 @startuml
+skinparam classAttributeIconSize 0
 package "Composite Pattern"{
     interface INode {
-        addNode(INode node):void
-        removeNode(INode node):void
+        +addNode(INode node):void
+        +removeNode(INode node):void
     }
     class Composite
-    note bottom:将多个单一对象组成具有一定层次关系的树形结构的组合对象,\n组合模式淡化了单一对象和组合对象之间的差别\n使得单一对象和组合对象具有相同的处理方式
+    note bottom:组合对象
+    note bottom:将多个单一对象组成具有一定层次关系的树形结构的组合对象,\n组合模式淡化了单一对象和组合对象之间的差别，\n使得单一对象和组合对象具有相同的处理方式
     class Composite implements INode {
         +mChildList:ArrayList<INode>
     }
+    class Leaf
+    note bottom:单一对象
     class Leaf implements INode
 }
 @enduml

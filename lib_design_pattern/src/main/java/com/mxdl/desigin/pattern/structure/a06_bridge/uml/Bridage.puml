@@ -1,16 +1,30 @@
 @startuml
+skinparam classAttributeIconSize 0
 package "Bridage Pattern"{
     abstract class APhoneBrand{
         createBrnad():void
     }
-    note top:将一个对象的抽象和实现相分离\n使二者可以相对独立变化
+    note left:抽象协议
+    note top:将一个对象的抽象和实现相分离，\n使二者可以相对独立变化
     interface IPhoneSoftware {
         crateSoftware():void
     }
+    note right:实现协议
     APhoneBrand ->IPhoneSoftware
+    class XiaoMiBrand
+    note bottom:抽象对象1
     class XiaoMiBrand extends APhoneBrand
+
+   class XiaoMiSoftware
+   note bottom:实现对象1
     class XiaoMiSoftware implements IPhoneSoftware
+
+    class SanXingBrand
+    note bottom:抽象对象2
     class SanXingBrand extends APhoneBrand
+
+    class SanXingSoftware
+    note bottom:实现对象2
     class SanXingSoftware implements IPhoneSoftware
 
 

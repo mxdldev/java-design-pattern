@@ -2,12 +2,18 @@
 skinparam classAttributeIconSize 0
 package "class Builder"{
     interface IPersonBuilder{
-            +createHeader():String;
-            +createBody():String;
-            +createFooter():String;
+            +createHeader():String
+            +createBody():String
+            +createFooter():String
     }
-    class PersonFatBuilder implements IPersonBuilder
-    class PersonThinBuilder implements IPersonBuilder
+    note right:建造协议
+    class PersonFatBuilder
+    note bottom:胖子建造者
+    IPersonBuilder <|-.PersonFatBuilder
+
+    class PersonThinBuilder
+    note bottom:瘦子建造者
+    IPersonBuilder <|-.PersonThinBuilder
 
     class BuilderHandler{
         +createPerson(IPersonBuilder build):Person
@@ -15,6 +21,7 @@ package "class Builder"{
     note top:将一个复杂对象的创建和表示相分离，\n用相同的构建过程创建出不同的对象表示
     BuilderHandler o-.>IPersonBuilder
     BuilderHandler o-.>Person
-
+    class Person
+    note bottom:被建造的实体对象
 }
 @enduml

@@ -1,13 +1,18 @@
 @startuml
+skinparam classAttributeIconSize 0
 package "Flyweight Pattern"{
     interface IWebSite
     class User
+    note bottom:外部状态
     class WebSite implements IWebSite
+    class WebSite
+    note bottom:享元对象
     WebSite .->User
     class WebSiteFactory{
         -mHashMap:HashMap<String, WebSite>
         +getWebSite(String key):WebSite
     }
+    note top:享元工厂
     note top:通过享元对象可以提供大量的细粒度化的对象
     WebSiteFactory -->WebSite
 }

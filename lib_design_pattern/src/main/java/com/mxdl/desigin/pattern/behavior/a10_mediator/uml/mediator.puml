@@ -1,5 +1,5 @@
 @startuml
-
+skinparam classAttributeIconSize 0
 package "Mediator Pattern"{
     interface ICountry {
         sendMessage(String message):void
@@ -14,12 +14,18 @@ package "Mediator Pattern"{
      sendMessage(String msg, ICountry country):void
     }
     class UN
+    note bottom:联合国
     note bottom:将多个对象之间多对多的网状关系变成一对多的星状关系
+    class Usa
+    note left:美国
     class Usa implements ICountry
+
+    class Irap
+    note left:伊拉克
     class Irap implements ICountry
 
-    Usa <-- UN
-    Irap <-- UN
+    Usa <--* UN
+    Irap <--* UN
 
 }
 

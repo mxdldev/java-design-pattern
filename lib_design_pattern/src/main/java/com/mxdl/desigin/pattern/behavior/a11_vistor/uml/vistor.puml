@@ -1,10 +1,11 @@
 @startuml
+skinparam classAttributeIconSize 0
 package "Vistor Pattern"{
     interface IVistor{
         void vistorMan(Man manager);
         void vistorWoman(Woman expler);
     }
-    note top:将对象的表示和行为相分离\n适合数据结构比较稳定的数据
+    note top:将对象的表示和行为相分离，\n适合数据结构比较稳定的数据
 
     class SuccVistor
     note right:成功的访问者
@@ -20,7 +21,12 @@ package "Vistor Pattern"{
     }
     note right:被访问的实体对象
 
+    class Man
+    note left:实体对象1
     class Man extends APerson
+
+    class Woman
+    note left:实体对象2
     class Woman extends APerson
     APerson -.> IVistor
 }

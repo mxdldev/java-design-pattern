@@ -7,7 +7,7 @@ package "class Singleton" #FFFFFF {
     -Singleton()
     +getInstance():Singleton
     }
-    note right: 确保一个类只有一个实例对象的存在,\n而且自行实例化，自行提供对外访问的接口
+    note top: 确保一个类只有一个实例对象存在,而且自行实例化，\n自行提供对外访问的接口
     Singleton <.. Client
 }
 

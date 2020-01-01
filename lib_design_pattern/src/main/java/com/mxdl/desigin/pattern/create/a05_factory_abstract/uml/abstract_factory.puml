@@ -1,21 +1,38 @@
 @startuml
+skinparam classAttributeIconSize 0
 package "Abstract Factory"{
 interface IPerson{
      +eat():void
      +sleep():void
      +study():void
 }
+
 class YellowPerson implements IPerson
 class WhitePerson implements IPerson
 class BlackPerson implements IPerson
 
+class YellowManPerson
+note bottom:黄色男人
 class YellowManPerson extends YellowPerson
+
+class YellowWomanPerson
+note bottom:黄色女人
 class YellowWomanPerson extends YellowPerson
 
+class WhiteManPerson
+note bottom:白色男人
 class WhiteManPerson extends WhitePerson
+
+class WhiteWomanPerson
+note bottom:白色女人
 class WhiteWomanPerson extends WhitePerson
 
+class BlackManPerson
+note bottom:黑色男人
 class BlackManPerson extends BlackPerson
+
+class BlackWomanPerson
+note bottom:黑色女人
 class BlackWomanPerson extends BlackPerson
 
 interface IPersonFactory {
@@ -24,7 +41,12 @@ interface IPersonFactory {
     +IPerson createYellowPersonFactory():IPerson;
 }
 note top:定义一个创建一组相关或具有相互依赖关系\n的对象的接口，而且无需指定他们的具体类型
+class ManFactory
+note right:男人工厂
 class ManFactory implements IPersonFactory
+
+class WomanFactory
+note right:女人工厂
 class WomanFactory implements IPersonFactory
 
 ManFactory -.> IPerson

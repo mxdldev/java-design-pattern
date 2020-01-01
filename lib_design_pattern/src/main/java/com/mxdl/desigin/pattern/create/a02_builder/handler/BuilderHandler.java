@@ -1,6 +1,7 @@
-package com.mxdl.desigin.pattern.create.a02_builder.entity;
+package com.mxdl.desigin.pattern.create.a02_builder.handler;
 
 import com.mxdl.desigin.pattern.create.a02_builder.contract.IPersonBuilder;
+import com.mxdl.desigin.pattern.create.a02_builder.entity.Person;
 
 /**
  * Description: <BuilderHandler><br>

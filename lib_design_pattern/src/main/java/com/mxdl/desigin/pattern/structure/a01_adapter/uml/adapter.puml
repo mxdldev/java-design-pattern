@@ -1,0 +1,24 @@
+@startuml
+skinparam classAttributeIconSize 0
+package "Adapter Pattern"{
+    abstract class APlayer{
+        +attack():void
+        +defense():void
+    }
+    class QiaoDan
+    note bottom:兄弟对象
+    class QiaoDan extends APlayer
+
+    class KeBi
+    note bottom:兄弟对象
+    class KeBi extends APlayer
+    class TranslaterAdapter extends APlayer
+    class TranslaterAdapter
+    note left:适配器对象
+    note top:将一个接口转换为客户所需要的另外一个接口,\n使原来由于接口不兼容而不能在一起工作的两\n个类能够在一起正常工作
+    TranslaterAdapter --> YaoMing
+    class YaoMing
+    note right:被适配的对象
+}
+
+@enduml

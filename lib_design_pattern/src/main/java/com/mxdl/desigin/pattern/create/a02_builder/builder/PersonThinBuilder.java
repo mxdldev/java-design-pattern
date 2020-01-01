@@ -1,4 +1,4 @@
-package com.mxdl.desigin.pattern.create.a02_builder.entity;
+package com.mxdl.desigin.pattern.create.a02_builder.builder;
 
 import com.mxdl.desigin.pattern.create.a02_builder.contract.IPersonBuilder;
 

@@ -1,11 +1,20 @@
 @startuml
+skinparam classAttributeIconSize 0
+
 class Subject extends Observable {
     +void update():void
 }
+note bottom:被观察者
 class Subject
-note bottom:定义了一种一对多的依赖关系，当被观察者发生过变化是时，\n所有的观察者都能收到通知，并且能够自动更新
+note bottom:定义了一种一对多的依赖关系，当被观察者发生变化时，\n所有的观察者都会收到通知，并且能够自动更新
+class Observer1
+note left:观察者1
 class Observer1 implements Observer
+
+class Observer2
+note right:观察者2
 class Observer2 implements Observer
+
 Observer1 <--o Subject
 Observer2 <--o Subject
 @enduml

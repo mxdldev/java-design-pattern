@@ -1,13 +1,19 @@
 @startuml
-package PoxyPattern {
+skinparam classAttributeIconSize 0
+package "Poxy Pattern" {
     interface IGame {
         +login():void
         +palyer():void
     }
+    class GamePlayer
+    note bottom:被代理的对象
     class GamePlayer implements IGame
+
     class GamePoxy
+    note bottom:代理对象
     note bottom:给一个对象提供一个代理对象\n来控制对该对象的访问
     class GamePoxy implements IGame
+
     GamePoxy -> GamePlayer
 }
 @enduml

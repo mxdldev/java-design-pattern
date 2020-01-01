@@ -1,10 +1,9 @@
 package com.mxdl.desigin.pattern.create.a02_builder;
 
-import com.designmode.create.t04_builder.PersonBuilder;
-import com.mxdl.desigin.pattern.create.a02_builder.entity.BuilderHandler;
+import com.mxdl.desigin.pattern.create.a02_builder.handler.BuilderHandler;
 import com.mxdl.desigin.pattern.create.a02_builder.entity.Person;
-import com.mxdl.desigin.pattern.create.a02_builder.entity.PersonFatBuilder;
-import com.mxdl.desigin.pattern.create.a02_builder.entity.PersonThinBuilder;
+import com.mxdl.desigin.pattern.create.a02_builder.builder.PersonFatBuilder;
+import com.mxdl.desigin.pattern.create.a02_builder.builder.PersonThinBuilder;
 
 /**
  * Description: <Client><br>

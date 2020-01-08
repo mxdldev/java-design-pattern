@@ -1,13 +1,13 @@
 @startuml
 skinparam classAttributeIconSize 0
 
-package "class Singleton" #FFFFFF {
+package "Singleton Pattern"{
 
     class Singleton{
     -Singleton()
     +getInstance():Singleton
     }
-    note top: 确保一个类只有一个实例对象存在,而且自行实例化，\n自行提供对外访问的接口
+    note top: 确保一个类只有一个实例对象存在，而且自行实例化，\n自行提供对外访问的接口
     Singleton <.. Client
 }
 

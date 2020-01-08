@@ -1,4 +1,4 @@
-package com.mxdl.desigin.pattern.structure.a04_face.contract;
+package com.mxdl.desigin.pattern.structure.a04_facade.contract;
 
 /**
  * Description: <ICook><br>

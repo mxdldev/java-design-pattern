@@ -1,6 +1,6 @@
-package com.mxdl.desigin.pattern.structure.a04_face.entity;
+package com.mxdl.desigin.pattern.structure.a04_facade.entity;
 
-import com.mxdl.desigin.pattern.structure.a04_face.contract.ICook;
+import com.mxdl.desigin.pattern.structure.a04_facade.contract.ICook;
 
 /**
  * Description: <NoodleCook><br>

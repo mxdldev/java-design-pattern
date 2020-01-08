@@ -1,5 +1,8 @@
 package com.mxdl.desigin.pattern.create.a05_factory_abstract;
 
+import com.mxdl.desigin.pattern.create.a05_factory_abstract.contract.IPerson;
+import com.mxdl.desigin.pattern.create.a05_factory_abstract.factory.ManFactory;
+
 /**
  * Description: <Client><br>
  * Author:      mxdl<br>
@@ -8,4 +11,14 @@ package com.mxdl.desigin.pattern.create.a05_factory_abstract;
  * Update:     <br>
  */
 public class Client {
+    public static void main(String[] args) {
+        ManFactory manFactory = new ManFactory();
+        IPerson whitePerson = manFactory.createWhitePerson();
+        IPerson yellowPerson = manFactory.createYellowPerson();
+        IPerson blackPerson = manFactory.createBlackPerson();
+
+        whitePerson.eat();
+        yellowPerson.eat();
+        blackPerson.eat();
+    }
 }

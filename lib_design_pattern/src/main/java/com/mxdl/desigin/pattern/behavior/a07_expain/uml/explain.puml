@@ -1,5 +1,6 @@
 @startuml
 skinparam classAttributeIconSize 0
+package "Explain Pattern"{
 interface IExplain {
     explain():int
 }
@@ -23,4 +24,6 @@ class MulExplain implements IExplain
 class DevExplain
 note bottom:除法语法算法
 class DevExplain implements IExplain
+
+}
 @enduml

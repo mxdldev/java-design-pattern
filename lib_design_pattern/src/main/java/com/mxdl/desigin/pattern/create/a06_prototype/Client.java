@@ -1,6 +1,7 @@
 package com.mxdl.desigin.pattern.create.a06_prototype;
 
 import com.mxdl.desigin.pattern.create.a06_prototype.contract.APerson;
+import com.mxdl.desigin.pattern.create.a06_prototype.prototype.PrototypePerson;
 
 /**
  * Description: <Client><br>

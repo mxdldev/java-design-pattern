@@ -1,9 +1,9 @@
 @startuml
 skinparam classAttributeIconSize 0
-package Prototype{
+package "Prototype Pattern"{
     abstract class APerson
     class PrototypePerson
-    note bottom:由原型对象来指定创建对象的类型，\n并通过拷贝原型对象来新创建的对象
+    note bottom:由原型对象来指定创建对象的类型，\n并通过拷贝原型对象来创建新的对象
     class PrototypePerson extends APerson{
         +clonePerson():APerson
     }

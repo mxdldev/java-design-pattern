@@ -1,6 +1,6 @@
 @startuml
 skinparam classAttributeIconSize 0
-package "Abstract Factory"{
+package "Abstract Factory Pattern"{
 interface IPerson{
      +eat():void
      +sleep():void
@@ -36,9 +36,9 @@ note bottom:黑色女人
 class BlackWomanPerson extends BlackPerson
 
 interface IPersonFactory {
-    +createWhitePersonFactory():IPerson;
-    +IPerson createBlackPersonFactory():IPerson;
-    +IPerson createYellowPersonFactory():IPerson;
+    +createWhitePerson():IPerson;
+    +IPerson createBlackPerson():IPerson;
+    +IPerson createYellowPerson():IPerson;
 }
 note top:定义一个创建一组相关或具有相互依赖关系\n的对象的接口，而且无需指定他们的具体类型
 class ManFactory

@@ -15,17 +15,17 @@ import com.mxdl.desigin.pattern.create.a05_factory_abstract.entity.YellowManPers
  */
 public class ManFactory implements IPersonFactory {
     @Override
-    public IPerson createWhitePersonFactory() {
+    public IPerson createWhitePerson() {
         return new WhiteManPerson();
     }
 
     @Override
-    public IPerson createBlackPersonFactory() {
+    public IPerson createBlackPerson() {
         return new BlackManPerson();
     }
 
     @Override
-    public IPerson createYellowPersonFactory() {
+    public IPerson createYellowPerson() {
         return new YellowManPerson();
     }
 }

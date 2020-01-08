@@ -8,7 +8,7 @@ package com.mxdl.desigin.pattern.create.a05_factory_abstract.contract;
  * Update:     <br>
  */
 public interface IPersonFactory {
-    IPerson createWhitePersonFactory();
-    IPerson createBlackPersonFactory();
-    IPerson createYellowPersonFactory();
+    IPerson createWhitePerson();
+    IPerson createBlackPerson();
+    IPerson createYellowPerson();
 }

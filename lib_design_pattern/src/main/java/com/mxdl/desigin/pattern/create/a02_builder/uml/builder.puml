@@ -1,6 +1,6 @@
 @startuml
 skinparam classAttributeIconSize 0
-package "class Builder"{
+package "Builder Pattern"{
     interface IPersonBuilder{
             +createHeader():String
             +createBody():String

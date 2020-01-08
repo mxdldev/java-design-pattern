@@ -14,7 +14,7 @@ import com.mxdl.desigin.pattern.behavior.a07_expain.entity.SubExplain;
  */
 public class Client {
     public static void main(String[] args) {
-    //    2+4*2-3
+        //2+4*2-3
         NumberExpain expain2 = new NumberExpain(2);
         NumberExpain expain4 = new NumberExpain(4);
         NumberExpain expain3 = new NumberExpain(3);

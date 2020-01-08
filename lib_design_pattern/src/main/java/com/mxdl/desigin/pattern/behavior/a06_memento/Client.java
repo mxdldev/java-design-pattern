@@ -20,8 +20,5 @@ public class Client {
         System.out.println(person.toString());
         person.reMementtoPerson(mementtoPerson);
         System.out.println(person.toString());
-
-
-
     }
 }

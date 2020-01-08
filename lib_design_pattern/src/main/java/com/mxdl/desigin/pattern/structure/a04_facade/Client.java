@@ -1,8 +1,8 @@
-package com.mxdl.desigin.pattern.structure.a04_face;
+package com.mxdl.desigin.pattern.structure.a04_facade;
 
-import com.mxdl.desigin.pattern.structure.a04_face.entity.CookManager;
-import com.mxdl.desigin.pattern.structure.a04_face.entity.NoodleCook;
-import com.mxdl.desigin.pattern.structure.a04_face.entity.RiceCook;
+import com.mxdl.desigin.pattern.structure.a04_facade.entity.CookManager;
+import com.mxdl.desigin.pattern.structure.a04_facade.entity.NoodleCook;
+import com.mxdl.desigin.pattern.structure.a04_facade.entity.RiceCook;
 
 /**
  * Description: <Client><br>

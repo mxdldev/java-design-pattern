@@ -1,6 +1,6 @@
-package com.mxdl.desigin.pattern.create.a06_prototype;
+package com.mxdl.desigin.pattern.create.a06_prototype.prototype;
 
-import com.mxdl.desigin.pattern.create.a02_builder.entity.Person;
+import com.mxdl.desigin.pattern.create.a06_prototype.entity.CopyPerson;
 import com.mxdl.desigin.pattern.create.a06_prototype.contract.APerson;
 
 /**

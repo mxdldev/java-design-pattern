@@ -21,5 +21,4 @@ public class Client {
         usa.sendMessage("不要研究核武器，否则将发生战争");
         irap.sendMessage("我们没有研究核武器，我们也不怕侵略");
     }
-
 }

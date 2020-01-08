@@ -1,4 +1,4 @@
-package com.mxdl.desigin.pattern.structure.a04_face.entity;
+package com.mxdl.desigin.pattern.structure.a04_facade.entity;
 
 /**
  * Description: <CookManager><br>
